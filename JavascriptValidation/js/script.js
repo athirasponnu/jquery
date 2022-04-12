@@ -1,6 +1,23 @@
 $(document).ready(function(){
-    $("#btn").click(function(e){
+    $("#formSubmit").submit(function(e){
         e.preventDefault();
+        validateInput();
+    });
+    $("input").blur(function(e){
+        e.preventDefault();
+        validateInput();
+    });
+    $("select").blur(function(e){
+        e.preventDefault();
+        validateInput();
+    });
+    $("textarea").blur(function(e){
+        e.preventDefault();
+        validateInput();
+    });
+});
+function validateInput()
+{
         var username=$("#name");
         let email=$("#email");
         let password=$("#password");
@@ -80,14 +97,14 @@ $(document).ready(function(){
     {
         success(confirmPassword);
     }
-    if(gender1.checked==false && gender2.checked==false )
+
+    if (!$("input[name='gender']:checked").val())
     {
-       document.getElementById("genderErr").innerHTML="* Please select a gender";
+       $("#genderErr").html("* Please select a gender");
     }
     else
     {
-        document.getElementById("genderErr").innerHTML="";
-       
+        $("#genderErr").hide();
     }
     let dobValue=dob.val().trim();
     if(dobValue=="")
@@ -138,14 +155,14 @@ $(document).ready(function(){
         success(contactNum);
     }
       
-    if(chk1.checked==false && chk2.checked==false && chk3.checked==false )
+    if (!$("input[name='checkbox']:checked").val())
     {
-        document.getElementById("checkboxErr").innerHTML="* Please select your qualification";
+        $("#checkboxErr").html("* Please select your qualification");
         
     }
     else
     {
-        document.getElementById("checkboxErr").innerHTML=" ";
+        $("#checkboxErr").html("");
     }
     let inputFileValue=inputFile.val().trim();
     let validImageExtension=["jpeg","jpg"];
@@ -171,10 +188,8 @@ $(document).ready(function(){
     {
         success(inputFile);
     }
-    });
-});
-
-
+   
+}
 
 
 function error(input,message)
