@@ -1,0 +1,199 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+.container
+{
+    background-color: rgba(223, 226, 230, 0.884);
+    margin-left:30%;
+    margin-top:15px;
+    width:40%;
+    padding:30px;
+    padding-left:6%;
+    font-size:13px;
+    border-radius:5px;
+}
+input
+{
+    margin:10px 0px;
+    margin-bottom: 0px;
+    width:85%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+select
+{
+    margin:10px 0px;
+    width:85%;
+    padding:10px ;
+    border:none;
+    border-radius:5px;
+}
+.feild
+{
+    margin-top:10px;
+}
+#dob
+{
+    padding:10px 55px 10px 35px;
+    width:84%;
+}
+.feildDiv
+{
+   position:relative;
+}
+.feildDiv i
+{
+    position: absolute;
+    display:none;
+    left:77%;
+    top:37px;
+    font-size:16px;
+}
+.feildDiv i.fa-circle-check
+{
+    color:green;
+}
+.feildDiv i.fa-circle-exclamation
+{
+    color:red;
+}
+.feildDiv p
+{
+    
+    left:0;
+    bottom:0;
+    top:0;
+}
+textarea
+{
+    margin:10px 0px;
+    width:85%;
+    padding:10px ;
+    border:none;
+    border-radius:5px;
+}
+
+input:focus
+{
+    outline:none;
+}
+select:focus
+{
+    outline:none;
+}
+.feildDiv.success textarea
+{
+    border:2px solid green;
+}
+.feildDiv.success input
+{
+    border:2px solid green;
+}
+
+.feildDiv.error input
+{
+    border:2px solid red;
+}
+.feildDiv.error textarea
+{
+    border:2px solid red;
+}
+.feildDiv.error select
+{
+    border:2px solid red;
+}
+.feildDiv.success select
+{
+    border:2px solid green;
+}
+.bordererror
+{
+   border:2px solid red;
+}
+.bordersuccess
+{
+   border:2px solid green;
+}
+.successicon i.fa-circle-check
+{
+  display:block;
+  color:green;
+}
+.fail i.fa-circle-exclamation
+{
+   display:block;
+   color:red;
+}
+.feildDiv.error p
+{
+    visibility:visible;
+    color:red;
+}
+.errorMsg
+{
+    visibility:visible;
+    color:red; 
+}
+.successMsg
+{
+    visibility:hidden;
+}
+/* .feildDiv.error i.fa-circle-exclamation
+{
+    visibility: visible;
+    color:red;
+}
+.feildDiv.error i.fa-circle-check
+{
+    visibility: hidden;
+} */
+textarea:focus
+{
+    outline:none;
+}
+#selectErr
+{
+    visibility: visible;
+    color:red;
+}
+.selectclass
+{
+    padding:0px;
+    margin-top:10px;
+    width:4%;
+    margin-left:5px;
+    margin-right:5px;
+}
+.file-class
+{
+    background-color: white;
+}
+button
+{
+    width:35%;
+    padding:10px;
+    background-color:rgb(15, 185, 38);
+    margin-left:25%;
+    margin-top:20px;
+    border: 1px solid rgb(15, 185, 38);
+    border-radius:3px;
+    color:white;
+}
+#genderErr
+{
+    visibility: visible;
+    color:red;
+}
+#checkboxErr
+{
+    visibility: visible;
+    color:red;
+}
