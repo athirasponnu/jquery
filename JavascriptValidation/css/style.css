@@ -116,21 +116,21 @@ select:focus
 }
 .bordererror
 {
-   border:2px solid red;
+    border:2px solid red;
 }
 .bordersuccess
 {
-   border:2px solid green;
+    border:2px solid green;
 }
 .successicon i.fa-circle-check
 {
-  display:block;
-  color:green;
+    display:block;
+    color:green;
 }
 .fail i.fa-circle-exclamation
 {
-   display:block;
-   color:red;
+    display:block;
+    color:red;
 }
 .feildDiv.error p
 {
@@ -146,15 +146,6 @@ select:focus
 {
     visibility:hidden;
 }
-/* .feildDiv.error i.fa-circle-exclamation
-{
-    visibility: visible;
-    color:red;
-}
-.feildDiv.error i.fa-circle-check
-{
-    visibility: hidden;
-} */
 textarea:focus
 {
     outline:none;

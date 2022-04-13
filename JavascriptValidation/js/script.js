@@ -18,22 +18,29 @@ $(document).ready(function(){
 });
 function validateInput()
 {
-        var username=$("#name");
-        let email=$("#email");
-        let password=$("#password");
-        let confirmPassword=$("#confirmPassword");
-        let gender1=$("#gen1");
-        let gender2=$("#gen2");
-        let dob=$("#dob");
-        let occupationDetails=$("#description");
-        let sel=$("#sel");
-        let chk1=$("#chk1");
-        let chk2=$("#chk2");
-        let chk3=$("#chk3");
-        let contactNum=$("#contactNum");
-        let inputFile=$("#image");
-        let nameValue=username.val().trim();
-         let validName="^[a-zA-Z\s]+$";
+    var username=$("#name");
+    let email=$("#email");
+    let password=$("#password");
+    let confirmPassword=$("#confirmPassword");
+    let dob=$("#dob");
+    let occupationDetails=$("#description");
+    let sel=$("#sel");
+    let contactNum=$("#contactNum");
+    let inputFile=$("#image");
+    let nameValue=username.val().trim();
+    let validName="^[a-zA-Z\s]+$";
+    let emailValue=email.val().trim();
+    let validEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let passwordValue=password.val().trim();
+    let validPassword="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])";
+    let confirmPasswordValue=confirmPassword.val().trim();
+    let dobValue=dob.val().trim();
+    let occupationValue=occupationDetails.val().trim();
+    let contactValue=contactNum.val().trim();
+    let validPhoneNum=/^\d{10}$/;
+    let inputFileValue=inputFile.val().trim();
+    let validImageExtension=["jpeg","jpg"];
+    //Username Validation
     if(nameValue=="")
     {
         error(username,"* Username cannot be empty");
@@ -48,8 +55,7 @@ function validateInput()
         success(username);
         
     }
-    let emailValue=email.val().trim();
-    let validEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //Email validation
     if(emailValue=="")
     {
         error(email,"* Email cannot be empty");  
@@ -63,8 +69,7 @@ function validateInput()
     {
         success(email);
     }
-    let passwordValue=password.val().trim();
-    let validPassword="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])";
+    //password validation
     if(passwordValue=="")
     {
         error(password,"* Password cannot be empty");
@@ -82,9 +87,7 @@ function validateInput()
     {
         success(password);
     }
-
-//confirm password validation
-    let confirmPasswordValue=confirmPassword.val().trim();
+    //confirm password validation    
     if(confirmPasswordValue=="")
     {
         error(confirmPassword,"* Password cannot be empty");
@@ -97,7 +100,7 @@ function validateInput()
     {
         success(confirmPassword);
     }
-
+     //gender validation
     if (!$("input[name='gender']:checked").val())
     {
        $("#genderErr").html("* Please select a gender");
@@ -106,7 +109,7 @@ function validateInput()
     {
         $("#genderErr").hide();
     }
-    let dobValue=dob.val().trim();
+    //date of Birth Validation
     if(dobValue=="")
     {
         error(dob," * Date of Birth feild cannot be empty");
@@ -115,8 +118,7 @@ function validateInput()
     {
         success(dob);
     }
-    
-    let occupationValue=occupationDetails.val().trim();
+    // occupation details validation
     if(occupationValue=="")
     {
         error(occupationDetails,"* Occupation details can't be empty");
@@ -129,8 +131,8 @@ function validateInput()
     {
         success(occupationDetails);
     }
-   
-   if(sel.val() == "")
+    //select validation
+    if(sel.val() == "")
     {
       error(sel,"* Please select your Country");
     }
@@ -139,9 +141,7 @@ function validateInput()
         document.getElementById("selectErr").innerHTML="";
         success(sel);
     }
-
-    let contactValue=contactNum.val().trim();
-    let validPhoneNum=/^\d{10}$/;
+    //phone number validation
     if(contactValue=="")
     {
         error(contactNum,"* Phone number feild cannot be empty");
@@ -154,7 +154,7 @@ function validateInput()
     {
         success(contactNum);
     }
-      
+     //Checkbox validation 
     if (!$("input[name='checkbox']:checked").val())
     {
         $("#checkboxErr").html("* Please select your qualification");
@@ -164,8 +164,7 @@ function validateInput()
     {
         $("#checkboxErr").html("");
     }
-    let inputFileValue=inputFile.val().trim();
-    let validImageExtension=["jpeg","jpg"];
+    //File validation
     if(inputFileValue=="")
     {
         error(inputFile,"* Please choose a  file");
@@ -188,10 +187,7 @@ function validateInput()
     {
         success(inputFile);
     }
-   
 }
-
-
 function error(input,message)
 {
     input.siblings("p").text(message).addClass("errorMsg");
@@ -202,7 +198,7 @@ function error(input,message)
 }
 function success(input)
 {
-     input.siblings("p").addClass("successMsg");
+    input.siblings("p").addClass("successMsg");
     input.addClass(" bordersuccess");
     input.siblings("i.fa-circle-exclamation").addClass("fail").hide();
     input.siblings("i.fa-circle-check").addClass("successicon").show();
