@@ -5,11 +5,14 @@
 body
 {
     font-family: sans-serif;
+    border:2px solid blue;
+    padding-bottom:25px;
+    margin:2% 15%;
 }
 .main-container
 {
     margin:0 auto;
-    width:700px;
+    width:600px;
     margin-top:20px;
 }
 .header
@@ -33,6 +36,21 @@ body
     margin:0 auto;
     padding:10px;  
     margin-top:10px;
+    position:relative;
+}
+.fa-chevron-down
+{
+    opacity:1;
+    float:right;
+    position:absolute;
+    margin:0% 80%;
+}
+.fa-angle-up
+{
+    position:absolute;
+    float:right;
+    margin:0% 80%;
+    opacity:0; 
 }
 .content
 {
@@ -42,7 +60,14 @@ body
     display:none;
     text-align:justify;
 }
+.icon{
+    margin:0% 79%;
+}
 .active
 {
     display:block;
+}
+.icon-class
+{
+    opacity:1;
 }

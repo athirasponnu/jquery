@@ -4,13 +4,19 @@ $(document).ready(function(){
        {
            $(this).removeClass("active");
            $(this).siblings(".content").slideUp();
+           $(this).children("i.fa-angle-up").addClass("icon-class").hide();  
+           $(this).children("i.fa-chevron-down").addClass("icon-class").show();
        }
        else
        {
         $(".heading").removeClass("active");
         $(this).addClass("active"); 
         $(this).siblings(".content").slideUp();
-        $(this).next(".content").slideDown();   
+        $(this).children("i.fa-angle-up").removeClass("icon-class").hide();  
+        $(this).children("i.fa-chevron-down").addClass("icon-class").show();
+        $(this).next(".content").slideDown(); 
+        $(this).children("i.fa-chevron-down").addClass("icon-class").hide();
+        $(this).children("i.fa-angle-up").addClass("icon-class").show();  
        }   
     });
 });

@@ -14,15 +14,22 @@ body
 .pop-up-window
 {
     visibility: hidden;
+    position:absolute;
+    text-align:center;
+    left:35%;
+     
 }
 .pop-up-content
 {
-    visibility: hidden;
+    background-color:rgb(114, 109, 109);
+    padding:25px;
+    height:300px;
+    width:500px;
 }
 .active
 {
     visibility:visible;
-    background-color:white;
+ 
 }
 button
 {
