@@ -1,0 +1,16 @@
+$(document).ready(function(){
+    $(".heading").click(function(){
+       if($(this).hasClass("active"))
+       {
+           $(this).removeClass("active");
+           $(this).siblings(".content").slideUp();
+       }
+       else
+       {
+        $(".heading").removeClass("active");
+        $(this).addClass("active"); 
+        $(this).siblings(".content").slideUp();
+        $(this).next(".content").slideDown();   
+       }   
+    });
+});
