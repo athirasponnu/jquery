@@ -16,8 +16,7 @@ body
     visibility: hidden;
     position:absolute;
     text-align:center;
-    left:35%;
-     
+    left:35%;    
 }
 .pop-up-content
 {
@@ -25,11 +24,12 @@ body
     padding:25px;
     height:300px;
     width:500px;
+    color:white;
+    box-shadow: 3px 3px 3px rgb(114, 109, 109);
 }
 .active
 {
     visibility:visible;
- 
 }
 button
 {
@@ -38,7 +38,4 @@ button
     background-color:red;
     color:white;
 }
-.pop-up
-{
-    
-}
+

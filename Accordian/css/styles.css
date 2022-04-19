@@ -5,9 +5,9 @@
 body
 {
     font-family: sans-serif;
-    border:2px solid blue;
+    border:2px solid rgb(34, 152, 182);
     padding-bottom:25px;
-    margin:2% 15%;
+    margin:2% 19%;
 }
 .main-container
 {
@@ -40,17 +40,10 @@ body
 }
 .fa-chevron-down
 {
-    opacity:1;
+    display: block ;
     float:right;
     position:absolute;
     margin:0% 80%;
-}
-.fa-angle-up
-{
-    position:absolute;
-    float:right;
-    margin:0% 80%;
-    opacity:0; 
 }
 .content
 {
@@ -67,7 +60,7 @@ body
 {
     display:block;
 }
-.icon-class
+.icon-fade
 {
-    opacity:1;
+    display:none !important;
 }
