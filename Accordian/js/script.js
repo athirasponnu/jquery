@@ -3,17 +3,17 @@ $(document).ready(function(){
        if($(this).hasClass("active"))
         {
            $(this).removeClass("active");
-           $(this).siblings(".content").slideUp();
+           $(this).siblings(".content").stop().slideUp();
            $(this).children("i.fa-chevron-down").removeClass("icon-fade");
         }
        else
         {
             $(".heading").removeClass("active");
             $(this).addClass("active"); 
-            $(this).siblings(".content").slideUp();
+            $(this).siblings(".content").stop().slideUp();
             $(".heading").children("i.fa-chevron-down").removeClass("icon-fade");
             $(this).children("i.fa-chevron-down").removeClass("icon-fade");
-            $(this).next(".content").slideDown(); 
+            $(this).next(".content").stop().slideDown(); 
             $(this).children("i.fa-chevron-down").addClass("icon-fade");
         }
     });

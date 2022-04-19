@@ -12,4 +12,10 @@ $(document).ready(function()
       $(".pop-up-content").removeClass("active");
       $(".pop-up-content").parent().removeClass("active ");  
    });
+   $(".fa-circle-xmark").click(function()
+   {
+      $(".btn").show();
+      $(".pop-up-content").removeClass("active");
+      $(".pop-up-content").parent().removeClass("active "); 
+   });
 });
