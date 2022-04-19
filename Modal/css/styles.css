@@ -9,22 +9,26 @@ body
 .main-container
 {
     width:500px;
-    margin:10% 40%;    
+    margin:10% 40%;   
 }
 .pop-up-window
 {
     visibility: hidden;
     position:absolute;
     text-align:center;
-    left:35%;    
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:gray;
 }
 .pop-up-content
 {
-    background-color:rgb(114, 109, 109);
+    visibility: hidden;
+    background-color:white;
     padding:25px;
-    height:300px;
-    width:500px;
-    color:white;
+    margin: 10% 35%;    
+    color:black;
     box-shadow: 3px 3px 3px rgb(114, 109, 109);
 }
 .active
